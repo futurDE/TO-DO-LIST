@@ -1,0 +1,43 @@
+textarea {
+    resize: none;
+    display: block;
+    width: 99%;
+    margin: auto;
+}
+
+.list-container {
+    border: 1px solid black;
+    margin: 5px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.check-box {
+    border: 1px solid black;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.check {
+    opacity: 0;
+}
+
+/*Style to be added dynamically with JavaScript*/
+.show-check {
+    opacity: 1;
+}
+
+/*Style to be added dynamically with JavaScript*/
+.dragging {
+    opacity: 0.5;
+}
+
+.cross {
+    cursor: pointer;
+}
