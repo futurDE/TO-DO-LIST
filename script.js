@@ -22,10 +22,18 @@ function addItem() {
     listContainer.setAttribute("draggable", "true");
     listContainer.innerHTML = `
         <div class="check-box">
-            <div class="check">&check;</div>
+            <div class="check">
+                <span class="material-symbols-outlined">
+                    check
+                </span>
+            </div>
         </div>
         <p class="list">${textarea.value}</p>
-        <div class="cross">&cross;</div>
+        <div class="cross">
+            <span class="material-symbols-outlined">
+                close
+            </span>
+        </div>
     `;
 
     displayArea.appendChild(listContainer);
@@ -50,9 +58,10 @@ showCheck();
 //Function to remove elements from the DOM
 function removeElements() {
     displayArea.addEventListener("click", (event) => {
+        let parent = event.target.closest(".list-container");
         let container = event.target.closest(".cross");
-        if (container) {
-            event.target.parentElement.remove();
+        if (container && parent) {
+            parent.remove();
         }
     });
 }

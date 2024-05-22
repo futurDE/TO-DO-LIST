@@ -1,3 +1,12 @@
+* {
+    font-family: "Roboto", sans-serif;
+}
+
+h3 {
+    margin: auto;
+    padding: 5px;
+}
+
 textarea {
     resize: none;
     display: block;
@@ -40,4 +49,11 @@ textarea {
 
 .cross {
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cross-mark {
+    display: block;
 }
